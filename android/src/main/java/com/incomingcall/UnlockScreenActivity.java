@@ -47,7 +47,10 @@ public class UnlockScreenActivity extends AppCompatActivity implements UnlockScr
     private static MediaPlayer player = MediaPlayer.create(IncomingCallModule.reactContext, Settings.System.DEFAULT_RINGTONE_URI);
     private static Activity fa;
     private Timer timer;
-
+    static UnlockScreenActivity instance;
+    public static UnlockScreenActivity getInstance() {
+      return instance;
+    }
 
     @Override
     public void onStart() {
@@ -63,6 +66,7 @@ public class UnlockScreenActivity extends AppCompatActivity implements UnlockScr
             }, timeout);
         }
         active = true;
+        instance = this;
     }
 
     @Override
