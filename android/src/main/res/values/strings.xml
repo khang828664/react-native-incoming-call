@@ -1,4 +1,4 @@
 <resources>
-    <string name="accept">Video</string>
-    <string name="decline">Decline</string>
+    <string name="accept">전화 받기</string>
+    <string name="decline">거절하기 한글 표시</string>
 </resources>
